@@ -12,7 +12,7 @@ class Smallest_Even_Multiple{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        Solution solution = new Solution();
+        Smallest_Even_Multiple solution = new Smallest_Even_Multiple();
         System.out.println(solution.smallestEvenMultiple(n));
     }
 }
