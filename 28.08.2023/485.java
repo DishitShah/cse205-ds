@@ -1,11 +1,15 @@
 class Solution {
-    public int findNumbers(int[] nums) {
-        int c=0;
-        for(int i =0 ; i< nums.length; i++){
-            if((nums[i]>9 && nums[i]<100) || (nums[i]>999 && nums[i]<10000) || nums[i]==100000){
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int c = 0, max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
                 c++;
+            } else {
+                if (max < c)
+                    max = c;
+                c = 0;
             }
         }
-        return c;  
+        return (max > c) ? max : c;
     }
 }
